@@ -7,7 +7,6 @@ const validar = () => {
     const propietario = document.getElementById('nombreDueño').value;
     const telefono = document.getElementById('telefono').value;
     const nombreMascota = document.getElementById('nombreMascota').value;
-    // const animal = document.querySelector()
     const diaCita = document.getElementById('diaCita').value;
     const diaCitaDate = new Date(diaCita);
     const diaHoy = new Date();
@@ -87,140 +86,124 @@ const arrConejos = ['./conejos/conejo1.jpg', './conejos/conejo2.jpg', './conejos
 const arrHamsters = ['./hamsters/hamster1.jpg', './hamsters/hamster2.jpg', './hamsters/hamster3.jpg', './hamsters/hamster4.jpg'];
 const arrPeces = ['./peces/pez1.jpg', './peces/pez2.jpg', './peces/pez3.jpg', './peces/pez4.jpg'];
 
-let contador = 1;
-
 const crearCita = (objCita) => {
-    // citas.forEach((objCita, index) => {
-        const articulo = document.createElement('article');
-        const img = document.createElement('img');
-        const divCliente = document.createElement('div');
-        const divLinea = document.createElement('div');
-        const divMascota = document.createElement('div');
-        const divContenedor = document.createElement('div');
-        const pDueño = document.createElement('p');
-        const spanDueño = document.createElement('span');
-        const pTelefono = document.createElement('p');
-        const spanTelefono = document.createElement('span');
-        const pMascota = document.createElement('p');
-        const spanMascota = document.createElement('span');
-        const pTipo = document.createElement('p');
-        const spanTipo = document.createElement('span');
-        const pFecha = document.createElement('p');
-        const spanFecha = document.createElement('span');
-        const pHora = document.createElement('p');
-        const spanHora = document.createElement('span');
-        const pSintomas = document.createElement('p');
-        const spanSintomas = document.createElement('span');
-        const seleccion = document.createElement('select');
-        const opcionActiva = document.createElement('option');
-        const opcionFinalizada = document.createElement('option');
-        const opcionCancelada = document.createElement('option')
+    const articulo = document.createElement('article');
+    const img = document.createElement('img');
+    const divCliente = document.createElement('div');
+    const divLinea = document.createElement('div');
+    const divMascota = document.createElement('div');
+    const divContenedor = document.createElement('div');
+    const pDueño = document.createElement('p');
+    const spanDueño = document.createElement('span');
+    const pTelefono = document.createElement('p');
+    const spanTelefono = document.createElement('span');
+    const pMascota = document.createElement('p');
+    const spanMascota = document.createElement('span');
+    const pTipo = document.createElement('p');
+    const spanTipo = document.createElement('span');
+    const pFecha = document.createElement('p');
+    const spanFecha = document.createElement('span');
+    const pHora = document.createElement('p');
+    const spanHora = document.createElement('span');
+    const pSintomas = document.createElement('p');
+    const spanSintomas = document.createElement('span');
+    const seleccion = document.createElement('select');
+    const opcionActiva = document.createElement('option');
+    const opcionFinalizada = document.createElement('option');
+    const opcionCancelada = document.createElement('option');
 
-        const imgRandom = Math.floor(Math.random() * 4);
+    const imgRandom = Math.floor(Math.random() * 4);
 
-        if (objCita.tipoMascota === 'Perro') {
-            img.src = arrPerros[imgRandom];
-        } else if (objCita.tipoMascota === 'Gato') {
-            img.src = arrGatos[imgRandom];
-        } else if (objCita.tipoMascota === 'Ave') {
-            img.src = arrAves[imgRandom];
-        } else if (objCita.tipoMascota === 'Conejo') {
-            img.src = arrConejos[imgRandom];
-        } else if (objCita.tipoMascota === 'Hamnster') {
-            img.src = arrHamsters[imgRandom];
-        } else {
-            img.src = arrPeces[imgRandom];
-        }
-        pDueño.textContent = 'Propietario: ';
-        spanDueño.textContent = objCita.nombrePropietario;
-        pTelefono.textContent = 'Telefono: ';
-        spanTelefono.textContent = objCita.telefonoPropietario;
-        pMascota.textContent = 'Mascota: ';
-        spanMascota.textContent = objCita.nombreMascota;
-        pTipo.textContent =  'Tipo: ';
-        spanTipo.textContent = objCita.tipoMascota;
-        pFecha.textContent = 'Fecha: ';
-        spanFecha.textContent = objCita.fecha;
-        pHora.textContent = 'Hora: ';
-        spanHora.textContent = objCita.hora;
-        pSintomas.textContent = 'Sintomas';
-        spanSintomas.textContent = objCita.sintomasMascota;
-        opcionActiva.textContent = 'Activa';
-        opcionActiva.value = 'activa';
-        opcionFinalizada.textContent = 'Finalizada';
-        opcionFinalizada.value = 'finalizada';
-        opcionCancelada.textContent = 'Cancelada';
-        opcionCancelada.value = 'cancelada';
+    if (objCita.tipoMascota === 'Perro') {
+        img.src = arrPerros[imgRandom];
+    } else if (objCita.tipoMascota === 'Gato') {
+        img.src = arrGatos[imgRandom];
+    } else if (objCita.tipoMascota === 'Ave') {
+        img.src = arrAves[imgRandom];
+    } else if (objCita.tipoMascota === 'Conejo') {
+        img.src = arrConejos[imgRandom];
+    } else if (objCita.tipoMascota === 'Hamnster') {
+        img.src = arrHamsters[imgRandom];
+    } else {
+        img.src = arrPeces[imgRandom];
+    }
+    pDueño.textContent = 'Propietario: ';
+    spanDueño.textContent = objCita.nombrePropietario;
+    pTelefono.textContent = 'Telefono: ';
+    spanTelefono.textContent = objCita.telefonoPropietario;
+    pMascota.textContent = 'Mascota: ';
+    spanMascota.textContent = objCita.nombreMascota;
+    pTipo.textContent =  'Tipo: ';
+    spanTipo.textContent = objCita.tipoMascota;
+    pFecha.textContent = 'Fecha: ';
+    spanFecha.textContent = objCita.fecha;
+    pHora.textContent = 'Hora: ';
+    spanHora.textContent = objCita.hora;
+    pSintomas.textContent = 'Sintomas';
+    spanSintomas.textContent = objCita.sintomasMascota;
+    opcionActiva.textContent = 'Activa';
+    opcionActiva.value = 'activa';
+    opcionFinalizada.textContent = 'Finalizada';
+    opcionFinalizada.value = 'finalizada';
+    opcionCancelada.textContent = 'Cancelada';
+    opcionCancelada.value = 'cancelada';
 
-        divCliente.classList.add('cliente');
-        divLinea.classList.add('linea');
-        divMascota.classList.add('mascota');
-        pSintomas.classList.add('s');
-        spanSintomas.classList.add('sintomashola');
-        seleccion.classList.add('estado')
-        articulo.classList.add('activa');
-        articulo.setAttribute('id', 'id' + contador);
+    articulo.classList.add('cita');
+    divCliente.classList.add('cliente');
+    divLinea.classList.add('linea');
+    divMascota.classList.add('mascota');
+    pSintomas.classList.add('s');
+    spanSintomas.classList.add('sintomashola');
+    seleccion.classList.add('citaSelect')
 
-        contador += 1;
+    pDueño.appendChild(spanDueño);
+    pTelefono.appendChild(spanTelefono);
+    pMascota.appendChild(spanMascota);
+    pTipo.appendChild(spanTipo);
+    pFecha.appendChild(spanFecha);
+    pHora.appendChild(spanHora);
+    pSintomas.appendChild(spanSintomas);
+    divCliente.appendChild(pDueño);
+    divCliente.appendChild(pTelefono);
+    divMascota.appendChild(pMascota);
+    divMascota.appendChild(pTipo);
+    divMascota.appendChild(pFecha);
+    divMascota.appendChild(pHora);
+    seleccion.appendChild(opcionActiva);
+    seleccion.appendChild(opcionFinalizada);
+    seleccion.appendChild(opcionCancelada);
+    divContenedor.appendChild(divCliente);
+    divContenedor.appendChild(divLinea);
+    divContenedor.appendChild(divMascota);
+    divContenedor.appendChild(pSintomas);
+    divContenedor.appendChild(seleccion);
+    articulo.appendChild(img);
+    articulo.appendChild(divContenedor);
 
-        pDueño.appendChild(spanDueño);
-        pTelefono.appendChild(spanTelefono);
-        pMascota.appendChild(spanMascota);
-        pTipo.appendChild(spanTipo);
-        pFecha.appendChild(spanFecha);
-        pHora.appendChild(spanHora);
-        pSintomas.appendChild(spanSintomas);
-        divCliente.appendChild(pDueño);
-        divCliente.appendChild(pTelefono);
-        divMascota.appendChild(pMascota);
-        divMascota.appendChild(pTipo);
-        divMascota.appendChild(pFecha);
-        divMascota.appendChild(pHora);
-        seleccion.appendChild(opcionActiva);
-        seleccion.appendChild(opcionFinalizada);
-        seleccion.appendChild(opcionCancelada);
-        divContenedor.appendChild(divCliente);
-        divContenedor.appendChild(divLinea);
-        divContenedor.appendChild(divMascota);
-        divContenedor.appendChild(pSintomas);
-        divContenedor.appendChild(seleccion);
-        articulo.appendChild(img);
-        articulo.appendChild(divContenedor);
-
-        document.getElementById('citasAqui').appendChild(articulo);
-    // })
+    document.getElementById('citasAqui').appendChild(articulo);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const estadoArticulo = document.querySelectorAll('.estado');
+function filtrarCitas() {
+    let opcionesFiltro = document.getElementById('opcionesFiltro');
+    let valueFiltro = opcionesFiltro.options[opcionesFiltro.selectedIndex].value;
 
-    estadoArticulo.forEach(selector => {
-        selector.addEventListener('change', (event) => {
-            const articulo = event.target.closest('article');
-            const nuevoEstado = event.target.value;
+    let citas = document.getElementsByClassName('cita');
 
-            articulo.classList.remove('activa', 'finalizada', 'cancelada');
-            articulo.classList.add(nuevoEstado);
-            filtrarPorEstado();
-        });
-    });
+    for (let i = 0; i < citas.length; i++) {
+        let cita = citas[i];
+        let citaSelect = cita.getElementsByClassName('citaSelect')[0];
+        let opcionCita = citaSelect.options[citaSelect.selectedIndex].value;
 
-    const filtroEstado = document.getElementById('filtroEstado');
-
-    filtroEstado.addEventListener('change', function () {
-        filtrarPorEstado();
-    });
-
-    function filtrarPorEstado() {
-        const estadoSeleccionado = filtroEstado.value;
-        const articulos = document.querySelectorAll('article');
-
-        articulos.forEach(articulo => {
-            if (articulo.classList.contains(estadoSeleccionado) || estadoSeleccionado === 'todos') {
-                articulo.style.display = 'block';
-            } else {
-                articulo.style.display = 'none';
-            }
-        });
+        if (valueFiltro === 'todas') {
+            cita.style.display = 'block';
+        } else if (opcionCita === valueFiltro) {
+            cita.style.display = 'block';
+        } else {
+            cita.style.display = 'none';
+        }
     }
-});
+}
+
+
+document.getElementById('opcionesFiltro').addEventListener('change', filtrarCitas);
+document.getElementsByClassName('citaSelect').addEventListener('change', filtrarCitas);

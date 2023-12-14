@@ -64,12 +64,16 @@
         <button onclick="validar()">Ingresar Cita</button>
     </section>
     <main id="citasAqui">
-        <select name="filtro" id="filtroEstado">
-            <option value="activa">Activas</option>
-            <option value="finaliza">Finalizadas</option>
-            <option value="cancelada">Canceladas</option>
-        </select>
-        <!-- <article>
+        <div id="filtroCitas">
+            <label for="opcionesFiltro">Filtro por estado de cita</label>
+            <select id="opcionesFiltro">
+                <option value="todas">Todas</option>
+                <option value="activa">Activas</option>
+                <option value="finalizada">Finalizadas</option>
+                <option value="cancelada">Canceladas</option>
+            </select>
+        </div>
+        <article class="cita">
             <img src="./peces/pez2.jpg" alt="el perrito del dueño">
             <div>
                 <div class="cliente">
@@ -83,14 +87,36 @@
                     <p>Fecha: <span>20/11/2023</span></p>
                     <p>Hora: <span>08:30</span></p>
                 </div>
-                <p class="s">Sintomas<span class="sintomashola">Tosjasdaj paosjd aosjdpasojda odaosj daos saoj dpao osjd aojdoa djjda</span></p>
-                <select class="estado">
+                <p class="s">Sintomas<span class="sintomashola">Tos</span></p>
+                <select class="citaSelect">
                     <option value="activa">Activa</option>
                     <option value="finalizada">Finalizada</option>
                     <option value="cancelada">Cancelada</option>
                 </select>
             </div>
-        </article> -->
+        </article>
+        <article class="cita">
+            <img src="./peces/pez2.jpg" alt="el perrito del dueño">
+            <div>
+                <div class="cliente">
+                    <p>Propietario: <span>Pepe</span></p>
+                    <p>Telefono: <span>3105078090</span></p>
+                </div>
+                <div class="linea"></div>
+                <div class="mascota">
+                    <p>Mascota: <span>Firulais</span></p>
+                    <p>Tipo: <span>Perro</span></p>
+                    <p>Fecha: <span>20/11/2023</span></p>
+                    <p>Hora: <span>08:30</span></p>
+                </div>
+                <p class="s">Sintomas<span class="sintomashola">Tos</span></p>
+                <select class="citaSelect">
+                    <option value="activa">Activa</option>
+                    <option value="finalizada">Finalizada</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+        </article>
     </main>
     <script src="./main.js"></script>
 </body>
