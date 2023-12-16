@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+    <title>Agenda una cita</title>
+</head>
+<body>
+    <input type="button" id="agendar" value="¡Agenda Tu Cita!" onclick="irAlFormulario()">
+    <div id="vacio">
+
+    </div>
+    <section id="registro">
+        <label for="nombreDueño" class="cuadricula"> 
+            <p>Propietario</p>
+            <input type="text" id="nombreDueño" class="centrarInput" placeholder="Jose...">
+        </label>
+        <label for="telefono" class="cuadricula">
+            <p>Telefono</p>
+            <input type="tel" id="telefono" class="centrarInput" placeholder="3105890000...">
+        </label>
+        <label for="nombreMascota" class="cuadricula">
+            <p>Nombre de la mascota</p>
+            <input type="text" id="nombreMascota" class="centrarInput" placeholder="Max...">
+        </label>
+        <div id="dobleFila" class="cuadricula">
+            <p>Tipo de mascota</p>
+            <label for="tipoDeAnimal" id="animalPerro">Perro
+                <input type="radio" name="elejirAnimal" id="animalPerro" value="Perro">
+            </label>
+            <label for="tipoDeAnimal" id="animalGato">Gato
+                <input type="radio" name="elejirAnimal" id="animalGato" value="Gato">
+            </label>
+            <label for="tipoDeAnimal" id="animalAve">Ave
+                <input type="radio" name="elejirAnimal" id="animalAve" value="Ave">
+            </label>
+            <label for="tipoDeAnimal" id="animalConejo">Conejo
+                <input type="radio" name="elejirAnimal" id="animalConejo" value="Conejo">
+            </label>
+            <label for="tipoDeAnimal" id="animalHamnster">Hamnster
+                <input type="radio" name="elejirAnimal" id="animalHamnster" value="Hamnster">
+            </label>
+            <label for="tipoDeAnimal" id="animalPez">Pez
+                <input type="radio" name="elejirAnimal" id="animalPez" value="Pez">
+            </label>
+        </div>
+        <label for="diaCita" class="cuadricula">
+            <p>Dia de la cita</p>
+            <input type="date" id="diaCita" class="centrarInput">
+        </label>
+        <label for="horaCita" class="cuadricula">
+            <p>Hora de la cita</p>
+            <input type="time" id="horaCita" class="centrarInput">
+        </label>
+        <label for="sintomas" id="dobleColumna" class="cuadricula">
+            <p>Sintomas</p>
+            <textarea id="sintomas" class="centrarInput" rows="2" placeholder="Decaimiento, falta de apetito, tos, cambios en el comportamiento..."></textarea>
+        </label>
+        <button onclick="validar()">Ingresar Cita</button>
+    </section>
+    <main id="citasAqui">
+        <div id="filtroCitas">
+            <label for="opcionesFiltro">Filtro por estado de cita</label>
+            <select id="opcionesFiltro">
+                <option value="todas">Todas</option>
+                <option value="activa">Activas</option>
+                <option value="finalizada">Finalizadas</option>
+                <option value="cancelada">Canceladas</option>
+            </select>
+        </div>
+        <!-- <article class="cita">
+            <img src="./peces/pez2.jpg" alt="el perrito del dueño">
+            <div>
+                <div class="cliente">
+                    <p>Propietario: <span>Pepe</span></p>
+                    <p>Telefono: <span>3105078090</span></p>
+                </div>
+                <div class="linea"></div>
+                <div class="mascota">
+                    <p>Mascota: <span>Firulais</span></p>
+                    <p>Tipo: <span>Perro</span></p>
+                    <p>Fecha: <span>20/11/2023</span></p>
+                    <p>Hora: <span>08:30</span></p>
+                </div>
+                <p class="s">Sintomas<span class="sintomashola">Tos</span></p>
+                <select class="citaSelect">
+                    <option value="activa">Activa</option>
+                    <option value="finalizada">Finalizada</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+        </article>
+        <article class="cita">
+            <img src="./peces/pez2.jpg" alt="el perrito del dueño">
+            <div>
+                <div class="cliente">
+                    <p>Propietario: <span>Pepe</span></p>
+                    <p>Telefono: <span>3105078090</span></p>
+                </div>
+                <div class="linea"></div>
+                <div class="mascota">
+                    <p>Mascota: <span>Firulais</span></p>
+                    <p>Tipo: <span>Perro</span></p>
+                    <p>Fecha: <span>20/11/2023</span></p>
+                    <p>Hora: <span>08:30</span></p>
+                </div>
+                <p class="s">Sintomas<span class="sintomashola">Tos</span></p>
+                <select class="citaSelect">
+                    <option value="activa">Activa</option>
+                    <option value="finalizada">Finalizada</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+        </article> -->
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
